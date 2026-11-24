@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <title> Sonic_Fan_Pagina</title>
+    
+</head> 
+<style>
+
+</style>
+
+<style>
+body {
+    background-image: url("Historias_1_Fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease;
+}
+
+
+</style><section class="fondo1">
+
+    <video class="video-sonic" controls>
+        <source src="vid/Introduccion_Sonic_And_The_Black_Knight.mp4" type="video/mp4">
+    </video>
+    
+    
+    <audio id="musica1">
+    <source src="wavmp3/Short_Intro_Sonic_And_The_Black_Knight.mp3" type="audio/mpeg">
+</audio>
+
+<button class="boton-musica1" onclick="alternarMusica('musica1', this)">
+    🔊 ==✴︎{========>
+</button>
+
+
+
+
+
+</section>
+</section>
+
+
+<script>
+    
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > 250) {
+        document.body.style.backgroundImage = 'url("Historias_2_Fondo.png")';
+    } else {
+        document.body.style.backgroundImage = 'url("Historias_1_Fondo.png")';
+    }
+
+});
+</script>
+
+<section class="fondo2">
+
+
+    <video class="video-blackknight" controls>
+        <source src="vid/Sonic_And_The_Secrets_Rings_Opening.mkv" type="video/mp4">
+    </video>
+
+</section>
+
+<style>
+    h1 {
+        color: #071d64;
+    }
+    
+</style>
+
+
+<body>
+    
+    
+    <audio id="musica2">
+    <source src="wavmp3/Short_Intro_Sonic_And_The_Secret_Rings.mp3" type="audio/mpeg">
+</audio>
+
+<button class="boton-musica2" onclick="alternarMusica('musica2', this)">
+    🔊 ────୨ৎ────
+</button>
+<script>
+
+function alternarMusica(id, boton) {
+
+    let musica = document.getElementById(id);
+
+    if (musica.paused) {
+        musica.play();
+        boton.innerHTML = "⚔️ Pausar Musica";
+    } else {
+        musica.pause();
+        boton.innerHTML = "💍 Pausar Musica";
+    }
+
+}
+
+</script>
+
+
